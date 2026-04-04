@@ -12,6 +12,6 @@ A Vencord UserPlugin that forces Discord to load profile pictures at double thei
 
 Since this is a custom UserPlugin, you need to be building Vencord from its source code. 
 
-1. Open your terminal and navigate to your Vencord's `userplugins` folder:
+1. Open your terminal and navigate to your Vencord's `src` folder:
    ```bash
-   cd path/to/Vencord/src/userplugins
+   cd path/to/Vencord/src
