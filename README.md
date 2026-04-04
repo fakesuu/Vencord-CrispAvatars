@@ -25,7 +25,7 @@ Since this is a custom UserPlugin, you need to be building Vencord from its sour
 
 3. Clone this repository into a folder named `crispAvatars`:
    ```bash
-   git clone https://github.com/fakesuu/vencord-crispavatars.git crispAvatars
+   git clone https://github.com/fakesuu/Vencord-CrispAvatars.git crispAvatars
    ```
    *(Note: Make sure the folder is named exactly `crispAvatars` or matches the plugin name to avoid build errors).*
 
