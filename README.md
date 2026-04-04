@@ -1,12 +1,18 @@
 # CrispAvatars for Vencord
 
-A Vencord UserPlugin that forces Discord to load profile pictures at double their default resolution. This results in a much sharper and crisper appearance on high-resolution displays (like a Retina display effect) without causing the severe performance issues associated with loading raw 4K images globally.
+A Vencord UserPlugin that forces Discord to load profile pictures at four times their default resolution. This results in an ultra-sharp appearance on high-resolution displays (supersampling effect) while maintaining a balance to avoid the extreme performance hits of loading raw 4K images everywhere.
 
 ## ✨ Features
 
-* **Smart Supersampling:** Intercepts Discord's image requests and mathematically doubles the requested size (up to the API limit of 4096px).
+* **Smart Supersampling:** Intercepts Discord's image requests and mathematically quadruples the requested size (e.g., 16px becomes 64px), up to the API limit of 4096px.
 * **Global Enhancement:** Improves avatar quality in the chat, member list, DMs, and user pop-out profiles.
-* **Zero Lag:** Avoids the common mistake of loading massive original images everywhere, keeping your client fast, responsive, and light on RAM.
+* **Optimized Performance:** Avoids the common mistake of forcing maximum resolution for every tiny icon, keeping your client fast and responsive.
+
+## 📝 Known Limitations
+
+Some specific UI elements (like the "Recent Avatars" or "Remove Avatar" confirmation modals) fetch raw, pre-formatted image URLs directly from Discord's servers, bypassing standard rendering functions. 
+
+CrispAvatars intentionally ignores these specific elements. Attempting to force higher resolutions on these menus would require aggressive network interception or constant DOM observation, which would cause significant lag and break the plugin's performance-first approach.
 
 ## 📦 Installation
 
@@ -25,9 +31,9 @@ Since this is a custom UserPlugin, you need to be building Vencord from its sour
 
 3. Clone this repository into a folder named `crispAvatars`:
    ```bash
-   git clone https://github.com/fakesuu/Vencord-CrispAvatars.git crispAvatars
+   git clone [https://github.com/fakesuu/Vencord-CrispAvatars.git](https://github.com/fakesuu/Vencord-CrispAvatars.git) crispAvatars
    ```
-   *(Note: Make sure the folder is named exactly `crispAvatars` or matches the plugin name to avoid build errors).*
+   *(Note: Make sure the folder is named exactly `crispAvatars` to avoid build errors).*
 
 4. Navigate back to the Vencord root folder and build the client:
    ```bash
