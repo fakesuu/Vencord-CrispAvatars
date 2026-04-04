@@ -15,3 +15,30 @@ Since this is a custom UserPlugin, you need to be building Vencord from its sour
 1. Open your terminal and navigate to your Vencord's `src` folder:
    ```bash
    cd path/to/Vencord/src
+   ```
+
+2. The `userplugins` folder isn't included by default. Create it if you haven't already, and navigate into it:
+   ```bash
+   mkdir userplugins
+   cd userplugins
+   ```
+
+3. Clone this repository into a folder named `crispAvatars`:
+   ```bash
+   git clone https://github.com/SeuUsuario/vencord-crisp-avatars.git crispAvatars
+   ```
+   *(Note: Make sure the folder is named exactly `crispAvatars` or matches the plugin name to avoid build errors).*
+
+4. Navigate back to the Vencord root folder and build the client:
+   ```bash
+   cd ../..
+   pnpm build
+   ```
+
+5. Reload Discord (`Ctrl + R`) or run `pnpm inject` if Vencord isn't injected yet.
+
+6. Go to **User Settings > Plugins**, search for **CrispAvatars**, and toggle it on!
+
+## ⚠️ Disclaimer
+
+This is an unofficial, community-made UserPlugin. It is not affiliated with, maintained, or endorsed by the official Vencord development team.
