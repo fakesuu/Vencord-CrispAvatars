@@ -8,12 +8,6 @@ A Vencord UserPlugin that safely increases the resolution of Avatars, Banners, a
 * **Global Enhancement:** Improves image quality across the board, including Avatars in chat/member lists, Profile Banners, and Background Icons.
 * **Highly Optimized:** Uses an invisible memory tracker (`WeakMap`) instead of HTML attributes to prevent infinite rendering loops. This keeps the DOM clean and ensures the plugin remains entirely unnoticeable regarding performance.
 
-## Known Limitations
-
-Some specific UI elements (like the "Recent Avatars" or "Remove Avatar" confirmation modals) fetch raw, pre-formatted image URLs directly from Discord's servers, bypassing standard rendering functions. 
-
-CrispAvatars intentionally ignores these specific elements. Attempting to force higher resolutions on these menus would require aggressive network interception or constant DOM observation, which would cause significant lag and break the plugin's performance-first approach.
-
 ## Installation
 
 Since this is a custom UserPlugin, you need to be building Vencord from its source code. 
