@@ -1,12 +1,12 @@
 # CrispAvatars for Vencord
 
-A Vencord UserPlugin that forces Discord to load profile pictures at four times their default resolution. This results in an ultra-sharp appearance on high-resolution displays (supersampling effect) while maintaining a balance to avoid the extreme performance hits of loading raw 4K images everywhere.
+A Vencord UserPlugin that safely increases the resolution of Avatars, Banners, and Server Icons by snapping to Discord's officially supported sizes. This results in an ultra-sharp appearance on high-resolution displays (supersampling effect) while keeping your client fast and avoiding the performance hits of loading raw 4K images everywhere.
 
 ## Features
 
-* **Smart Supersampling:** Intercepts Discord's image requests and mathematically quadruples the requested size (e.g., 16px becomes 64px), up to the API limit of 4096px.
-* **Global Enhancement:** Improves avatar quality in the chat, member list, DMs, and user pop-out profiles.
-* **Optimized Performance:** Avoids the common mistake of forcing maximum resolution for every tiny icon, keeping your client fast and responsive.
+* **Smart Scaling:** Intercepts Discord's image requests and doubles the requested size (e.g., 64px becomes 128px). It intelligently snaps to Discord's strict CDN size list (e.g., smoothly bumping 480px banners to 600px) to prevent broken images or rejected requests.
+* **Global Enhancement:** Improves image quality across the board, including Avatars in chat/member lists, Profile Banners, and Background Icons.
+* **Highly Optimized:** Uses an invisible memory tracker (`WeakMap`) instead of HTML attributes to prevent infinite rendering loops. This keeps the DOM clean and ensures the plugin remains entirely unnoticeable regarding performance.
 
 ## Known Limitations
 
